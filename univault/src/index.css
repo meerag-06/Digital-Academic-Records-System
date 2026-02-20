@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom project base styles (kept minimal when using Tailwind) */
+:root {
+  --color-primary: #4A90E2;
+  --color-secondary: #1F3A60;
+  --color-lightbg: #EAF4FF;
+  font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, 'Helvetica Neue', Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans, 'Segoe UI', 'Roboto', system-ui);
+  background-color: #f5f5f5;
+  color: #213547;
+}
+
+/* Small helpers that complement Tailwind classes */
+.loading {
+  @apply text-center py-10 text-gray-500;
+}
+
+/* Table defaults */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+th {
+  background: var(--color-lightbg);
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
